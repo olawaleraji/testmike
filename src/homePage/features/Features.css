@@ -1,9 +1,13 @@
+/* Features.css */
+
 #features-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding: 20px;
+  margin-top: 50px;
+  width: 97.4vw; 
 }
 
 #features-container-top {
@@ -13,24 +17,60 @@
 
 #features-container-bottom {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  height: 60%;
-}
-
-#features-container-firstText {
-  text-align: center;
+  margin-top: 20px;
 }
 
 .features-container-bottomDivs {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
+  width: calc(100% - 40px); 
+  max-width: 350px; 
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto; 
+  transition: transform 0.3s ease; 
+  background: rgb(240, 238, 238);
+  height: 22rem;
+}
+
+.features-container-bottomDivs:hover {
+  transform: scale(1.05); /* Increase size on hover */
 }
 
 .features-container-bottomDivs img {
-  height: 50%;
+  height: 100px;
   width: 100%;
   margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.features-container-bottomDivs h3 {
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+}
+
+.features-container-bottomDivs p {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .features-container-bottomDivs {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .features-container-bottomDivs {
+    width: calc(33.33% - 20px);
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .features-container-bottomDivs {
+    width: calc(100% - 40px);
+    margin-bottom: 40px;
+  }
 }

@@ -14,31 +14,34 @@ const HeroSection = () => {
   return (
     <>
       {logged ? <Login /> : null}
-
-      <div id="heroContainer">
-        <nav>
+      <section className="container">
+      <nav>
           <img id="sail_logo" src={assets.sail_logo} alt="logo" />
-
-          <Link to={"/about"} id="hero-about">
-            <p>About SAIL</p>
+          <div className="buttons">
+            <Link to={"/user"}  onClick={toggleLog}>
+            <p className="a">Get Started</p>
           </Link>
-
-          <Link to={"/user"} className="hero-startNav" onClick={toggleLog}>
-            <p>Get Started</p>
-          </Link>
-        </nav>
-
-        <div id="hero-main">
-          <h1 id="hero-main-top-text">Experience the power of AI</h1>
-          <p id="hero-main-bottom-text">
-            A project built by cloudDotz, a team at the SAIL tech talent program
-          </p>
-          <Link to={"/user"} className="hero-start">
-            <p>Get Started</p>
-          </Link>
-          <img src={assets.ai_img} id="ai-img" alt="AI_img" />
         </div>
-      </div>
+        </nav>
+    <div className="content">
+    <h1>
+    Discover the Possibilities with
+    <span> Artificial Intelligence</span>
+</h1>
+<p>
+    Explore a revolutionary AI project developed by cloudDotz, a dedicated team from the esteemed SAIL tech talent program.
+</p>
+
+        <div className="buttons">
+            <Link to={"/user"}  onClick={toggleLog}>
+            <p className="a">Get Started</p>
+          </Link>
+        </div>
+    </div>
+    <div className="image">
+        <img src={assets.ai_img}  alt="Digital Agency Image" />
+    </div>
+</section>
     </>
   );
 };
