@@ -1,0 +1,36 @@
+#features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#features-container-top {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#features-container-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 60%;
+}
+
+#features-container-firstText {
+  text-align: center;
+}
+
+.features-container-bottomDivs {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.features-container-bottomDivs img {
+  height: 50%;
+  width: 100%;
+  margin-bottom: 1rem;
+}
